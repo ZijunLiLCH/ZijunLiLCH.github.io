@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zijun Li</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #555;
+      --accent: #1f5fbf;
+      --border: #e5e5e5;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .header-text h1 {
+      font-size: 2.4rem;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .header-text p {
+      margin: 0.4rem 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .profile-photo {
+      text-align: center;
+    }
+
+    .profile-photo img {
+      max-width: 240px; /* 1.5x original size */
+      border-radius: 6px;
+    }
+
+    .photo-credit {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    section h2 {
+      font-family: "Source Serif 4", serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+    }
+
+    .paper-meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .profile-photo img {
+        max-width: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <div class="header-text">
+        <h1>Zijun Li</h1>
+        <p>Ph.D. Candidate in Mathematics, Duke University</p>
+        <p>Email: zl307@duke.edu</p>
+      </div>
+      <div class="profile-photo">
+        <img src="photo.jpg" alt="Zijun Li">
+        <div class="photo-credit">Photo credit to Chuxian Chen.</div>
+      </div>
+    </header>
+
+    <section>
+      <h2>About me</h2>
+      <p>
+        Hello! I am Zijun Li, a fifth-year math Ph.D. student at Duke University, supervised by Professor <a href="https://sites.math.duke.edu/~ng/">Lenhard Ng</a>.
+        I obtained my B.S. degree at Peking University in 2021, under the supervision of Professor <a href="https://www.researchgate.net/profile/Bo-Dai-5">Bo Dai</a>.
+        Here is my <a href="CV.pdf">CV</a>.
+      </p>
+
+      <p>
+        My research lies in symplectic and contact topology. More specifically, I study
+        Floer-theoretic invariants of Legendrian links and relate them to the construction and
+        classification of Lagrangian fillings. I construct and compute holomorphic curve
+        invariants for cobordisms between Legendrian links, and I use these invariants to
+        distinguish Lagrangian fillings.
+      </p>
+
+      <p>
+        I am currently on the postdoc job market. Please feel free to reach out.
+      </p>
+    </section>
+
+    <section>
+      <h2>Research Interests</h2>
+      <p>
+        Symplectic geometry, contact geometry, low-dimensional topology, and cluster algebras.
+      </p>
+    </section>
+
+    <section>
+      <h2>Publications and Preprints</h2>
+      <ul>
+        <li>
+          Z. Li, <em>Immersed exact Lagrangian fillings and augmentations to arbitrary fields</em>,
+          in preparation.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Teaching Experience</h2>
+      <ul>
+        <li>Teaching Assistant, MATH 112L Laboratory Calculus II (Summer 2025)</li>
+        <li>Teaching Assistant, MATH 112L Laboratory Calculus II (Spring 2025)</li>
+        <li>Discussion Leader, MATH 218D-2 Matrices and Vectors (Fall 2024)</li>
+        <li>Grading Manager, MATH 111L Laboratory Calculus (Spring 2024)</li>
+        <li>Discussion Leader, MATH 202D Multivariable Calculus for Economics (Fall 2023)</li>
+        <li>Discussion Leader, MATH 218D-1 Matrices and Vector Spaces (Fall 2022)</li>
+        <li>Teaching Assistant, MATH 111L Laboratory Calculus I (Fall 2021)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Mentoring</h2>
+      <ul>
+        <li>
+          Project Manager, Duke Math+ (Summer 2024)<br>
+          <span class="paper-meta">
+            Project: <em>The combinatorics of Legendrian surfaces</em><br>
+            Project leader:
+            <a href="https://sites.google.com/view/jmhughes/home/">James Hughes</a><br>
+            Team members: Holly Keegan, Helen Pertsemlidis, June Wood
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Invited Talks</h2>
+      <ul>
+        <li>
+          NC State Geometry and Topology Seminar (November 2025)<br>
+          <span class="paper-meta">
+            Title: Legendrian links and their immersed fillings
+          </span>
+        </li>
+        <li>
+          Rutgers Symplectic Summer School (August 2025)<br>
+          <span class="paper-meta">
+            Title: Immersed exact Lagrangian fillings and augmentations to arbitrary fields
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Conferences and Workshops</h2>
+      <ul>
+        <li>CBMS Summer School 2025: Legendrian Links and the Microlocal Theory of Sheaves (June 2025)</li>
+        <li>Braids Reunion Workshop (July 2024)</li>
+        <li>Oberwolfach Arbeitsgemeinschaft: Cluster Algebras, online (October 2023)</li>
+        <li>Tech Topology Summer School (July 2023)</li>
+        <li>Instantons and Foams (May 2023)</li>
+        <li>Singularities in Low Dimensional Topology (January 2023)</li>
+        <li>Frontiers in Geometry and Topology Summer School (August 2022)</li>
+        <li>Georgia Topology Conference (May 2022)</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>
+        Contact: zl307@duke.edu
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
+
+
+
