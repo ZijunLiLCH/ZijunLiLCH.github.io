@@ -1,163 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zijun Li</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <title>Zijun Li | Mathematics</title>
+  <meta name="description" content="Academic homepage of Zijun Li, a postdoctoral researcher at the Centre for Geometry and Physics at Uppsala University working in symplectic and contact topology.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://zijunlilch.github.io/">
+
+  <meta property="og:title" content="Zijun Li | Mathematics">
+  <meta property="og:description" content="Postdoctoral researcher at the Centre for Geometry and Physics at Uppsala University. Research in symplectic and contact topology.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zijunlilch.github.io/">
+  <meta property="og:image" content="https://zijunlilch.github.io/photo.jpg">
 
   <style>
     :root {
       --bg: #ffffff;
-      --text: #1a1a1a;
-      --muted: #555;
-      --accent: #1f5fbf;
-      --border: #e5e5e5;
+      --text: #202124;
+      --muted: #5f6368;
+      --accent: #0b5a96;
+      --accent-dark: #083f6a;
+      --border: #dfe3e8;
+      --soft: #f7f9fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: Inter, sans-serif;
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--accent-dark);
+      text-decoration: underline;
     }
 
     .container {
-      max-width: 900px;
+      width: min(100% - 2.5rem, 980px);
       margin: 0 auto;
-      padding: 3rem 1.5rem;
+      padding: 3.5rem 0 2.5rem;
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 2rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 250px;
+      gap: 3.25rem;
+      align-items: start;
       margin-bottom: 3rem;
     }
 
-    .header-text h1 {
-      font-size: 2.4rem;
-      margin: 0;
-      font-weight: 600;
+    .header-text {
+      padding-top: 0.35rem;
     }
 
-    .header-text p {
-      margin: 0.4rem 0;
+    h1 {
+      margin: 0 0 0.85rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.6rem, 6vw, 3.6rem);
+      font-weight: 600;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    .position {
+      margin: 0 0 0.2rem;
+      font-size: 1.12rem;
+      font-weight: 500;
+    }
+
+    .affiliation {
+      margin: 0 0 1.05rem;
       color: var(--muted);
       font-size: 1.05rem;
     }
 
+    .contact-line {
+      margin: 0.35rem 0;
+    }
+
+    .cv-link {
+      display: inline-block;
+      margin-top: 0.35rem;
+      font-weight: 600;
+    }
+
     .profile-photo {
-      text-align: center;
+      width: 250px;
+      margin: 0;
     }
 
     .profile-photo img {
-      max-width: 240px; /* 1.5x original size */
-      border-radius: 6px;
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--border);
+      border-radius: 8px;
     }
 
-    .photo-credit {
-      font-size: 0.85rem;
+    .profile-photo figcaption {
+      margin-top: 0.45rem;
       color: var(--muted);
-      margin-top: 0.4rem;
+      font-size: 0.78rem;
+      text-align: center;
     }
 
     section {
-      margin-bottom: 3rem;
+      margin: 0 0 2.8rem;
+      scroll-margin-top: 1rem;
     }
 
-    section h2 {
-      font-family: "Source Serif 4", serif;
-      font-size: 1.6rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
+    h2 {
+      margin: 0 0 1rem;
+      padding-bottom: 0.4rem;
       border-bottom: 1px solid var(--border);
-      padding-bottom: 0.3rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    p {
+      margin: 0 0 1.1rem;
     }
 
     ul {
-      padding-left: 1.2rem;
+      margin: 0;
+      padding-left: 1.3rem;
     }
 
     li {
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.72rem;
     }
 
-    .paper-meta {
+    .item-title {
+      font-weight: 600;
+    }
+
+    .item-date,
+    .secondary {
       color: var(--muted);
-      font-size: 0.95rem;
+    }
+
+    .paper-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .paper-list li {
+      margin-bottom: 0;
+      padding: 0.95rem 1.05rem;
+      background: var(--soft);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
     }
 
     footer {
+      margin-top: 3.5rem;
+      padding-top: 1.25rem;
       border-top: 1px solid var(--border);
-      padding-top: 1.5rem;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
 
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
+    @media (max-width: 720px) {
+      .container {
+        width: min(100% - 2rem, 980px);
+        padding-top: 2rem;
       }
 
-      .profile-photo img {
-        max-width: 200px;
+      header {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .profile-photo {
+        width: min(250px, 75vw);
+      }
+    }
+
+    @media print {
+      body {
+        color: #000;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .container {
+        width: 100%;
+        padding: 0;
       }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Zijun Li",
+    "url": "https://zijunlilch.github.io/",
+    "jobTitle": "Postdoctoral Researcher",
+    "email": "zijun.li@math.uu.se",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Uppsala University"
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Duke University"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Peking University"
+      }
+    ],
+    "knowsAbout": [
+      "Symplectic geometry",
+      "Contact geometry",
+      "Low-dimensional topology",
+      "Cluster algebras"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <div class="container">
+  <main class="container">
 
     <header>
       <div class="header-text">
         <h1>Zijun Li</h1>
-        <p>Ph.D. Candidate in Mathematics, Duke University</p>
-        <p>Email: zl307@duke.edu</p>
+        <p class="position">Postdoctoral Researcher</p>
+        <p class="affiliation">Centre for Geometry and Physics, Uppsala University</p>
+        <p class="contact-line">Email: zijun.li@math.uu.se</p>
+        <p class="contact-line">
+          <a class="cv-link" href="CV_Postdoc_Version.pdf">Curriculum Vitae (PDF)</a>
+        </p>
       </div>
-      <div class="profile-photo">
-        <img src="photo.jpg" alt="Zijun Li">
-        <div class="photo-credit">Photo credit to Chuxian Chen.</div>
-      </div>
+
+      <figure class="profile-photo">
+        <img src="photo.jpg" alt="Portrait of Zijun Li">
+        <figcaption>Photo credit to Chuxian Chen.</figcaption>
+      </figure>
     </header>
 
-    <section>
+    <section id="about">
       <h2>About me</h2>
+
       <p>
-        Hello! I am Zijun Li, a fifth-year math Ph.D. student at Duke University, supervised by Professor <a href="https://sites.math.duke.edu/~ng/">Lenhard Ng</a>.
-        I obtained my B.S. degree at Peking University in 2021, under the supervision of Professor <a href="https://www.researchgate.net/profile/Bo-Dai-5">Bo Dai</a>.
-        Here is my <a href="CV.pdf">CV</a>.
+        Hello! I am Zijun Li, a postdoctoral researcher at the Centre for Geometry and Physics
+        at Uppsala University. I obtained my Ph.D. degree in Mathematics at Duke University,
+        where my advisor was Professor
+        <a href="https://sites.math.duke.edu/~ng/" target="_blank" rel="noopener noreferrer">Lenhard Ng</a>.
+        Before that, I obtained my B.S. degree in Mathematics and Applied Mathematics at
+        Peking University in 2021, under the supervision of Professor
+        <a href="https://www.researchgate.net/profile/Bo-Dai-5" target="_blank" rel="noopener noreferrer">Bo Dai</a>.
+        Here is my <a href="CV_Postdoc_Version.pdf">CV</a>.
       </p>
 
       <p>
         My research lies in symplectic and contact topology. More specifically, I study
-        Floer-theoretic invariants of Legendrian links and relate them to the construction and
-        classification of Lagrangian fillings. I construct and compute holomorphic curve
+        Floer-theoretic invariants of Legendrian links and relate them to the construction
+        and classification of Lagrangian fillings. I construct and compute holomorphic curve
         invariants for cobordisms between Legendrian links, and I use these invariants to
         distinguish Lagrangian fillings.
       </p>
-
-      <p>
-        I will join the Centre for Geometry and Physics at Uppsala University as a postdoctoral researcher in September 2026.
-      </p>
     </section>
 
-    <section>
+    <section id="research">
       <h2>Research Interests</h2>
       <p>
         Symplectic geometry, contact geometry, low-dimensional topology, and cluster algebras.
       </p>
     </section>
 
-    <section>
+    <section id="publications">
       <h2>Publications and Preprints</h2>
-      <ul>
+      <ul class="paper-list">
         <li>
           Z. Li, <em>Immersed exact Lagrangian fillings and augmentations to arbitrary fields</em>,
           in preparation.
@@ -165,75 +306,75 @@
       </ul>
     </section>
 
-    <section>
-      <h2>Teaching Experience</h2>
-      <ul>
-        <li>Teaching Assistant, MATH 112L Laboratory Calculus II (Summer 2025)</li>
-        <li>Teaching Assistant, MATH 112L Laboratory Calculus II (Spring 2025)</li>
-        <li>Discussion Leader, MATH 218D-2 Matrices and Vectors (Fall 2024)</li>
-        <li>Grading Manager, MATH 111L Laboratory Calculus (Spring 2024)</li>
-        <li>Discussion Leader, MATH 202D Multivariable Calculus for Economics (Fall 2023)</li>
-        <li>Discussion Leader, MATH 218D-1 Matrices and Vector Spaces (Fall 2022)</li>
-        <li>Teaching Assistant, MATH 111L Laboratory Calculus I (Fall 2021)</li>
-      </ul>
-    </section>
-
-    <section>
+    <section id="mentoring">
       <h2>Mentoring</h2>
       <ul>
         <li>
-          Project Manager, Duke Math+ (Summer 2024)<br>
-          <span class="paper-meta">
-            Project: <em>The combinatorics of Legendrian surfaces</em><br>
-            Project leader:
-            <a href="https://sites.google.com/view/jmhughes/home/">James Hughes</a><br>
-            Team members: Holly Keegan, Helen Pertsemlidis, June Wood
-          </span>
+          <span class="item-title">Project Manager, Duke Math+ 2024</span>
+          <span class="item-date">(Summer 2024)</span><br>
+          Project: <em>The combinatorics of Legendrian surfaces</em><br>
+          Project leader:
+          <a href="https://sites.google.com/view/jmhughes/home/" target="_blank" rel="noopener noreferrer">James Hughes</a><br>
+          Team members: Holly Keegan, Helen Pertsemlidis, June Wood
         </li>
       </ul>
     </section>
 
-    <section>
+    <section id="talks">
       <h2>Invited Talks</h2>
       <ul>
         <li>
-          NC State Geometry and Topology Seminar (November 2025)<br>
-          <span class="paper-meta">
-            Title: Legendrian links and their immersed fillings
-          </span>
+          <span class="item-title">UMN Differential Geometry and Symplectic Topology Seminar</span>
+          <span class="item-date">(February 2026)</span><br>
+          <span class="secondary">Title:</span> <em>Legendrian links and their immersed fillings</em>
         </li>
         <li>
-          Rutgers Symplectic Summer School (August 2025)<br>
-          <span class="paper-meta">
-            Title: Immersed exact Lagrangian fillings and augmentations to arbitrary fields
-          </span>
+          <span class="item-title">NC State Geometry and Topology Seminar</span>
+          <span class="item-date">(November 2025)</span><br>
+          <span class="secondary">Title:</span> <em>Legendrian links and their immersed fillings</em>
+        </li>
+        <li>
+          <span class="item-title">Rutgers Symplectic Summer School 2025</span>
+          <span class="item-date">(August 2025)</span><br>
+          <span class="secondary">Title:</span>
+          <em>Immersed exact Lagrangian fillings and augmentations to arbitrary fields</em>
         </li>
       </ul>
     </section>
 
-    <section>
+    <section id="conferences">
       <h2>Conferences and Workshops</h2>
       <ul>
-        <li>CBMS Summer School 2025: Legendrian Links and the Microlocal Theory of Sheaves (June 2025)</li>
-        <li>Braids Reunion Workshop (July 2024)</li>
-        <li>Oberwolfach Arbeitsgemeinschaft: Cluster Algebras, online (October 2023)</li>
-        <li>Tech Topology Summer School (July 2023)</li>
-        <li>Instantons and Foams (May 2023)</li>
-        <li>Singularities in Low Dimensional Topology (January 2023)</li>
-        <li>Frontiers in Geometry and Topology Summer School (August 2022)</li>
-        <li>Georgia Topology Conference (May 2022)</li>
+        <li>AMS Spring Eastern Meeting 2026 <span class="item-date">(March 2026)</span></li>
+        <li>CBMS Summer School 2025: Legendrian Links and the Microlocal Theory of Sheaves <span class="item-date">(June 2025)</span></li>
+        <li>Braids Reunion Workshop <span class="item-date">(July 2024)</span></li>
+        <li>Oberwolfach Arbeitsgemeinschaft: Cluster Algebras (online participation) <span class="item-date">(October 2023)</span></li>
+        <li>Tech Topology Summer School 2023 <span class="item-date">(July 2023)</span></li>
+        <li>Instantons and Foams <span class="item-date">(May 2023)</span></li>
+        <li>Singularities in low dimensional topology <span class="item-date">(January 2023)</span></li>
+        <li>Frontiers in Geometry and Topology Summer School <span class="item-date">(August 2022)</span></li>
+        <li>Georgia Topology Conference 2022 <span class="item-date">(May 2022)</span></li>
+      </ul>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching Experience</h2>
+      <ul>
+        <li>Discussion Leader, MATH 202D Multivariable Calculus for Economics <span class="item-date">(Spring 2026)</span></li>
+        <li>Teaching Assistant, MATH 112L Laboratory Calculus II <span class="item-date">(Summer 2025)</span></li>
+        <li>Teaching Assistant, MATH 112L Laboratory Calculus II <span class="item-date">(Spring 2025)</span></li>
+        <li>Discussion Leader, MATH 218D-2 Matrices and Vectors <span class="item-date">(Fall 2024)</span></li>
+        <li>Grading Manager, MATH 111L Laboratory Calculus <span class="item-date">(Spring 2024)</span></li>
+        <li>Discussion Leader, MATH 202D Multivariable Calculus for Economics <span class="item-date">(Fall 2023)</span></li>
+        <li>Discussion Leader, MATH 218D-1 Matrices and Vector Spaces <span class="item-date">(Fall 2022)</span></li>
+        <li>Teaching Assistant, MATH 111L Laboratory Calculus I <span class="item-date">(Fall 2021)</span></li>
       </ul>
     </section>
 
     <footer>
-      <p>
-        Contact: zl307@duke.edu
-      </p>
+      Contact: zijun.li@math.uu.se
     </footer>
 
-  </div>
+  </main>
 </body>
 </html>
-
-
-
